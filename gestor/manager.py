@@ -1,6 +1,6 @@
 """ Administrador de clientes """
 import re
-
+import helpers
 
 clients = []
 
@@ -21,6 +21,8 @@ def show_all():
     for client in clients:
         show(client)
         
+        
+        
 
 def find():
 
@@ -32,6 +34,30 @@ def find():
             return client
 
     print("No se ha encontrado ningún cliente con ese DNI")
+    
+    
+    
+    
+def add():
+
+    client = dict()
+
+    print("Introduce nombre (De 2 a 30 caracteres)")
+    client['nombre'] = helpers.input_text(2, 30)
+
+    print("Introduce apellido (De 2 a 30 caracteres)")
+    client['apellido'] = helpers.input_text(2, 30)
+
+    while True:
+        print("Introduce DNI (2 números y 1 carácter en mayúscula)")
+        dni = helpers.input_text(3, 3)
+        if is_valid(dni):
+            client['dni'] = dni
+            break
+        print("DNI incorrecto o en uso")
+
+    clients.append(client)
+    return client    
     
     
     

@@ -28,8 +28,9 @@ def loop():
             print("Mostrando un cliente...\n")
             manager.find()
         if option == '3':
-            print("Modificando un cliente...\n")
-            # TODO
+            print("Añadiendo un cliente...\n")
+            manager.add()
+            print("Cliente añadido correctamente\n")
         if option == '4':
             print("Modificando un cliente...\n")
             # TODO
