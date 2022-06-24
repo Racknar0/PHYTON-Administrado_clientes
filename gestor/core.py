@@ -1,9 +1,9 @@
 """ FICHERO PRINCIPAL DEL GESTOR """
 
+import menu
 
 def main():
-    # TODO: ACA va el menu
-    pass
+    menu.loop()
 
 
 if __name__ == "__main__":
