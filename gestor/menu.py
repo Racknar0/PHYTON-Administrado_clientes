@@ -1,9 +1,9 @@
 """ Menú del programa """
-import os
+import helpers
 
 def loop():
     while True:
-        os.system('cls')  # 'clear' para Linux y OS X
+        helpers.clear()
 
         print("========================")
         print("  BIENVENIDO AL GESTOR  ")
@@ -18,7 +18,7 @@ def loop():
 
         option = input("> ")
 
-        os.system('cls')  # 'clear' para Linux y OS X
+        helpers.clear()
 
         if option == '1':
             print("Listando los clientes...\n")
