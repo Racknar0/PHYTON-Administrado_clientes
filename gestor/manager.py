@@ -60,7 +60,18 @@ def add():
     return client    
     
     
-    
+def edit():
+    dni = input("Introduce el DNI del cliente\n> ")
+    for i, client in enumerate(clients):
+        if client['dni'] == dni:
+            print(f"Introduce nuevo nombre ({client['nombre']})")
+            clients[i]['nombre'] = helpers.input_text(2, 30)
+            print(f"Introduce nuevo apellido ({client['apellido']})")
+            clients[i]['apellido'] = helpers.input_text(2, 30)
+            return True
+    return False
+
+
     
 def is_valid(dni):
     """

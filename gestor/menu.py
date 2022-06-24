@@ -33,7 +33,8 @@ def loop():
             print("Cliente añadido correctamente\n")
         if option == '4':
             print("Modificando un cliente...\n")
-            # TODO
+            if manager.edit():
+                print("Cliente modificado correctamente\n")
         if option == '5':
             print("Borrando un cliente...\n")
             # TODO
