@@ -1,5 +1,6 @@
 """ Menú del programa """
 import helpers
+import manager
 
 def loop():
     while True:
@@ -22,10 +23,10 @@ def loop():
 
         if option == '1':
             print("Listando los clientes...\n")
-            # TODO
+            manager.show_all()
         if option == '2':
             print("Mostrando un cliente...\n")
-            # TODO
+            manager.find()
         if option == '3':
             print("Modificando un cliente...\n")
             # TODO
