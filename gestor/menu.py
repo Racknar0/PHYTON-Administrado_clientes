@@ -37,7 +37,8 @@ def loop():
                 print("Cliente modificado correctamente\n")
         if option == '5':
             print("Borrando un cliente...\n")
-            # TODO
+            if manager.delete():
+                print("Cliente borrado correctamente\n")
         if option == '6':
             print("Saliendo...\n")
             break

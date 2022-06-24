@@ -95,6 +95,17 @@ def is_valid(dni):
     return True
 
 
+def delete():
+    dni = input("Introduce el DNI del cliente\n> ")
+    for i, client in enumerate(clients):
+        if client['dni'] == dni:
+            client = clients.pop(i)
+            show(client)
+            return True
+    return False
+
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
